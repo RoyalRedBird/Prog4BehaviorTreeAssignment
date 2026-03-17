@@ -3,7 +3,7 @@ using UnityEngine;
 public class FoodScript : MonoBehaviour
 {
 
-    float foodLeft = 10f;
+    [SerializeField] float foodLeft = 10f;
     [SerializeField] ParticleSystem foodParticleSys;
 
     public void EatFood()
@@ -24,6 +24,13 @@ public class FoodScript : MonoBehaviour
             Destroy(gameObject);
 
         }
+
+    }
+
+    public void PauseParticleEffect()
+    {
+
+        foodParticleSys.Stop();
 
     }
 
